@@ -12,7 +12,7 @@
   "main": "dist/index.js",
   "scripts": {
     "pretest": "eslint src",
-    "prepublish": "del-cli dist && set BABEL_ENV=publish babel src --out-dir dist --ignore /__tests__/",
+    "prepare": "del-cli dist && set BABEL_ENV=publish babel src --out-dir dist --ignore /__tests__/",
     "test": "nyc ava src/__tests__",
     "test-012": "nyc ava src/__tests__"
   },
@@ -20,7 +20,7 @@
     "LICENSE-MIT",
     "dist"
   ],
-  "repository": "ben-eb/gulp-svgmin",
+  "repository": "adamcoulombe/gulp-svgmin",
   "keywords": [
     "gulpplugin",
     "minify",
