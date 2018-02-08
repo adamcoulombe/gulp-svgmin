@@ -12,8 +12,7 @@
   "main": "dist/index.js",
   "scripts": {
     "pretest": "eslint src",
-    "prepublish": "del-cli dist && BABEL_ENV=publish babel src --out-dir dist --ignore /__tests__/",
-    "prepare" : "del-cli dist && BABEL_ENV=publish babel src --out-dir dist --ignore /__tests__/",
+    "prepublish": "del-cli dist && set BABEL_ENV=publish babel src --out-dir dist --ignore /__tests__/",
     "test": "nyc ava src/__tests__",
     "test-012": "nyc ava src/__tests__"
   },
@@ -29,6 +28,7 @@
     "svgo"
   ],
   "dependencies": {
+    "babel": "^6.23.0",
     "gulp-util": "^3.0.4",
     "svgo": "^1.0.4"
   },
